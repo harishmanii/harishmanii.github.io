@@ -235,13 +235,82 @@
             .nav-links { display: none; } /* Simplified mobile nav for cleaner code */
             .contact-info { grid-template-columns: 1fr; }
         }
+       
+
+
+
+
+/* --- SKILL CARDS LAYOUT --- */
+.skills-grid {
+    display: grid;
+    /* Creates a responsive grid that fits as many cards as possible */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--card);
+    padding: 25px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effects */
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card:hover i {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+/* Icon Style */
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+/* Skill Name */
+.skill-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+/* Proficiency Badge */
+.skill-level {
+    font-size: 0.75rem;
+    font-family: 'Space Mono', monospace;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1); /* Subtle blue background */
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+
+
+
+
     </style>
 </head>
 <body>
 
     <nav>
         <div class="container nav-content">
-            <div class="logo">Harish<span>.</span></div>
+            <div class="logo">Harishmani<span>.</span></div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#timeline">Experience</a>
@@ -253,152 +322,184 @@
 
     <section class="hero">
         <div class="container" data-aos="fade-up">
-            <p style="color: var(--accent); font-family: 'Space Mono', monospace;">Hi, my name is</p>
-            <h1>Harish Manii.</h1>
-            <h2 style="color: var(--text-secondary); font-size: 2rem; margin-bottom: 20px;">I build things for the web.</h2>
+            <p style="color: var(--accent); font-family: 'Space Mono', monospace;">Hi, i'm</p>
+            <h1>Harishmani</h1>
+            <h2 style="color: var(--text-secondary); font-size: 2rem; margin-bottom: 20px;">I work across systems, security, and software.</h2>
             <p style="max-width: 600px; margin: 0 auto 40px auto;">
-                A specialized Full Stack Developer focused on building accessible, human-centered products.
+                Curious about internals, real-world behavior, and failure modes across layers.
             </p>
-            <a href="mailto:your.email@example.com" class="cta-btn">Hire Me</a>
+            <a href="mailto:your.email@example.com" class="cta-btn">Contact Me</a>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <div class="section-header" data-aos="fade-right">
-                <h2>01. Who Am I</h2>
+ <section id="about">
+    <div class="container">
+        <div class="section-header" data-aos="fade-right">
+            <h2>01. Who Am I</h2>
+        </div>
+        <div class="about-grid">
+            <div class="profile-img-container" data-aos="fade-right">
+                <img src="me.jpeg" alt="Profile Photo" class="profile-img">
             </div>
-            <div class="about-grid">
-                <div class="profile-img-container" data-aos="fade-right">
-                    <img src="https://via.placeholder.com/400x400/1e293b/38bdf8?text=Your+Photo" alt="Profile Photo" class="profile-img">
-                </div>
 
-                <div class="about-details" data-aos="fade-left">
-                    <h3>Full Stack Developer</h3>
-                    <p>
-                        I am a passionate developer with a knack for solving complex problems. 
-                        My journey started with a curiosity about how the internet works, and today 
-                        I build robust applications using modern technologies.
-                    </p>
-                    <p>
-                        I focus on writing clean, efficient code and delivering user interfaces 
-                        that are both functional and visually appealing.
-                    </p>
+            <div class="about-details" data-aos="fade-left">
+                <h3>Systems • Security • Software</h3>
+                <p>
+                    I work across different layers of software—ranging from system internals and
+                    low-level concepts to user applications and infrastructure. What started as
+                    curiosity about how computers and the internet work grew into a habit of
+                    digging deep and understanding systems beyond the surface.
+                </p>
+                <p>
+                    I care about correctness, security, and real-world behavior. I enjoy analyzing
+                    how systems fail, why vulnerabilities exist, and how design decisions impact
+                    reliability and safety over time.
+                </p>
 
-                    <div class="contact-info">
-                        <div class="info-box">
-                            <span>Email</span>
-                            <strong>your.email@example.com</strong>
-                        </div>
-                        <div class="info-box">
-                            <span>Phone</span>
-                            <strong>+1 234 567 8900</strong>
-                        </div>
-                        <div class="info-box">
-                            <span>Location</span>
-                            <strong>Chennai, India</strong>
-                        </div>
-                        <div class="info-box">
-                            <span>GitHub</span>
-                            <strong>github.com/harishmanii</strong>
-                        </div>
+                <div class="contact-info">
+                    <div class="info-box">
+                        <span>Email</span>
+                        <strong>harishmani5051@gmail.com</strong>
+                    </div>
+                    <div class="info-box">
+                        <span>Location</span>
+                        <strong>Tenkasi, India</strong>
+                    </div>
+                    <div class="info-box">
+                        <span>GitHub</span>
+                        <strong>github.com/harishmanii</strong>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="timeline">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>02. Experience & Education</h2>
-            </div>
+    </div>
+</section>
+<section id="timeline">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>02. Experience & Education</h2>
+        </div>
+        
+        <div class="timeline">
             
-            <div class="timeline">
-                
-                <div class="timeline-item" data-aos="fade-up">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-date">2023 - Present</span>
-                    <div class="timeline-content">
-                        <h3>Full Stack Developer</h3>
-                        <h4>Company Name | City</h4>
-                        <ul>
-                            <li>Developing scalable web applications using React and Node.js.</li>
-                            <li>Collaborating with cross-functional teams to define features.</li>
-                            <li>Reduced page load times by 40% through code optimization.</li>
-                        </ul>
-                    </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <span class="timeline-dot"></span>
+                <span class="timeline-date">2021 – Present</span>
+                <div class="timeline-content">
+                    <h3>Security Engineer</h3>
+                    <h4>Zoho | Tenkasi</h4>
+                    <ul>
+                        <li>Analyzing application and system-level security issues across web and backend services.</li>
+                        <li>Identifying vulnerabilities, edge cases, and insecure design patterns in production systems.</li>
+                        <li>Working closely with development teams to validate fixes and improve overall security posture.</li>
+                        <li>Gaining hands-on exposure to real-world attack surfaces and large-scale software systems.</li>
+                    </ul>
                 </div>
-
-                <div class="timeline-item" data-aos="fade-up">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-date">2021 - 2022</span>
-                    <div class="timeline-content">
-                        <h3>Web Developer Intern</h3>
-                        <h4>Startup Name</h4>
-                        <ul>
-                            <li>Assisted in building the frontend UI using HTML, CSS, and JS.</li>
-                            <li>Fixed bugs and implemented responsive design features.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-date">2018 - 2022</span>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Engineering (CSE)</h3>
-                        <h4>University Name</h4>
-                        <p style="color: var(--text-secondary); margin-top: 5px;">
-                            Graduated with First Class Distinction. Focused on Data Structures, Algorithms, and Web Technologies.
-                        </p>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+                <span class="timeline-dot"></span>
+                <span class="timeline-date">2020</span>
+                <div class="timeline-content">
+                    <h3>Schooling</h3>
+                    <h4>Spectrum Matric Hr. Sec. School</h4>
+                    <p style="color: var(--text-secondary); margin-top: 5px;">
+                        Built a foundation in computer fundamentals and developed early interest
+                        in how applications, systems, and security work together.
+                    </p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>03. Technical Skills</h2>
-            </div>
-            
-            <div class="skills-container">
-                <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
-                    <h3><i class="fas fa-code"></i> Frontend</h3>
-                    <div class="skill-tag">HTML5</div>
-                    <div class="skill-tag">CSS3</div>
-                    <div class="skill-tag">JavaScript (ES6+)</div>
-                    <div class="skill-tag">React.js</div>
-                    <div class="skill-tag">Tailwind CSS</div>
-                    <div class="skill-tag">Redux</div>
-                </div>
 
-                <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-tag">Node.js</div>
-                    <div class="skill-tag">Express</div>
-                    <div class="skill-tag">MongoDB</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">REST APIs</div>
-                </div>
-
-                <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-tag">Git & GitHub</div>
-                    <div class="skill-tag">VS Code</div>
-                    <div class="skill-tag">Postman</div>
-                    <div class="skill-tag">Figma</div>
-                    <div class="skill-tag">Docker</div>
-                </div>
-            </div>
+<section id="skills">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>03. Skills & Expertise</h2>
         </div>
-    </section>
+        
+        <div class="skills-grid">
+
+            <!-- Languages -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <span class="skill-level">Working Knowledge</span>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <span class="skill-level">Proficient</span>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fab fa-c"></i>
+                <h3>C</h3>
+                <span class="skill-level">Working Knowledge</span>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+                <span class="skill-level">Working Knowledge</span>
+            </div>
+
+            <!-- Security -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Application Security</h3>
+                <span class="skill-level">Strong</span>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+                <i class="fas fa-bug"></i>
+                <h3>Vulnerability Analysis</h3>
+                <span class="skill-level">Strong</span>
+            </div>
+
+            <!-- Platforms -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fab fa-android"></i>
+                <h3>Android Development</h3>
+                <span class="skill-level">Proficient</span>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="450">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git & Tooling</h3>
+                <span class="skill-level">Daily Use</span>
+            </div>
+
+            <!-- Systems -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-microchip"></i>
+                <h3>Kernel & OS Development</h3>
+                <span class="skill-level">Hands-on (Learning)</span>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="550">
+                <i class="fas fa-memory"></i>
+                <h3>Low-Level Systems</h3>
+                <span class="skill-level">Working Knowledge</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
     <section id="projects">
         <div class="container">
+           <div class="section" data-aos="fade-up">
+                <h2>Project Section Under construction</h2>
+            </div>
+        </div>
+        <!-- <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>04. What I've Built</h2>
             </div>
@@ -450,7 +551,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
     </section>
 
     <footer style="text-align: center; padding: 20px; color: var(--text-secondary); font-size: 0.8rem;">
